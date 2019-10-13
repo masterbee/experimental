@@ -1,4 +1,3 @@
-<html lang="{{ page.lang }}" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
     <head prefix="og: http://ogp.me/ns#">
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,23 +24,3 @@
         </noscript>
 
     </head>
-
-    <body class="{{ page.class | "" }}" vocab="http://schema.org/" typeof="WebPage">
-        <header>
-            {{ assign hdr = page.lang | append: '/' | append: "header.html" }}
-            {% include hdr %}
-        </header>
-        <main property="mainContentOfPage" typeof="WebPageElement">
-
-            {{ content }}
-
-            {{ assign pd = page.lang | append: '/' | append: "pagedetails.html" }}
-            {% include pd %}
-        </main>
-         {{ assign ftr = page.lang | append: '/' | append: "footer.html" }}
-         {% include ftr %}
-
-        <script data-main="/assets/js/wet-boew/boot" src="/assets/vendor/requirejs/2.3.6/require.js"></script>
-
-    </body>
-</html>

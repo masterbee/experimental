@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+     {%- include head.html -%}
+    <body class="{{ page.class | "" }}" vocab="http://schema.org/" typeof="WebPage">
+        {%- include header.html -%}
+        <main property="mainContentOfPage" typeof="WebPageElement">
+            {{ content }}
+        </main>
+         {%- include footer.html -%}
+    </body>
+</html>
