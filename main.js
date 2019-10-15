@@ -21,7 +21,7 @@ require.config({
 	    }
 });
 
-require([ "/assets/wet-boew/dom/stylesheet.js" ], function( Stylesheet ) {
+require([ "/assets/wet-boew/lib/dom/stylesheet.js" ], function( Stylesheet ) {
     // Lets bind the dictionary to the window-object
     //window.i18n = i8n;
 
