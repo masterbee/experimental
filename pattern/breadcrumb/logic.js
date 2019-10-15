@@ -1,5 +1,5 @@
 /**
- * 
+ * Breadcrumb JS
  */
 define([] , function () {
 	

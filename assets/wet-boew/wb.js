@@ -10,22 +10,29 @@ var polyfills = [],
 // =========================
 
 require.config({
-    config: {
-        i18n: {
-            locale: lang
+    "config": {
+        "i18n": {
+            "locale": lang
         }
+    },
+    "paths": {
+        "highlight": "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min"
     }
 });
 
-require(["lib/dom/stylesheet"], function(Stylesheet) {
+alert(require.baseUrl);
+
+require(["lib/dom/stylesheet", 'lib/string/utils', 'lib/url/utils' ], function( Stylesheet, StrUtil, URLUtil ) {
+    var basePath = require.toUrl('');
 
     let insertListener = function(event) {
         if (event.animationName === "nodeInserted" && event.target.tagName.startsWith("WB-")) {
             var node = Object.assign(event.target, {});
-            var tagName = node.tagName.toLowerCase();
+            var tagName = StrUtil.removePrefix( node.tagName, 'wb-', true );
+
             var path = (node.getAttribute('srcid')) ? 
                 node.getAttribute('srcid') + "/logic.js" :
-                "core/" + tagName + "/logic.js";
+                URLUtil.absolute( "element/" + tagName.toLowerCase() + "/logic.js" );
 
             require([path], function(element) {
                 if (element && element.init) {

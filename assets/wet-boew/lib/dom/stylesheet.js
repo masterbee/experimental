@@ -1,5 +1,5 @@
 /**
- * Element class
+ * DOM class
  * @author Government of Canada
  * @version 1.0
  */
