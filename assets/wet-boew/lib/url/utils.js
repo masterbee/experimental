@@ -9,11 +9,10 @@ define([], function() {
     var base = require.toUrl(''); // Lets save the runtime base url
 
     function absolute( url ) {
-        if ( url.indexOf('/') === 0 )
+        if ( ! url.startsWith('/') )
         {
             return base + url;
         }        
-
         return base + '/' + url;
     }
 

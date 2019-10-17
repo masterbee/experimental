@@ -20,8 +20,6 @@ require.config({
     }
 });
 
-alert(require.baseUrl);
-
 require(["lib/dom/stylesheet", 'lib/string/utils', 'lib/url/utils' ], function( Stylesheet, StrUtil, URLUtil ) {
     var basePath = require.toUrl('');
 
@@ -29,6 +27,8 @@ require(["lib/dom/stylesheet", 'lib/string/utils', 'lib/url/utils' ], function( 
         if (event.animationName === "nodeInserted" && event.target.tagName.startsWith("WB-")) {
             var node = Object.assign(event.target, {});
             var tagName = StrUtil.removePrefix( node.tagName, 'wb-', true );
+
+            console.log( URLUtil.absolute( "element/" + tagName.toLowerCase() + "/logic.js" ) );
 
             var path = (node.getAttribute('srcid')) ? 
                 node.getAttribute('srcid') + "/logic.js" :
