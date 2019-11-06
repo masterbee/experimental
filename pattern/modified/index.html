@@ -1,0 +1,63 @@
+---
+title: Date modified
+layout: default
+lang: en
+---
+<!--  Content -->
+	<h1 property="name" id="wb-cont" dir="ltr">{{ page.title }} - Canada.ca design pattern</h1>
+    <p class="gc-byline"><strong>From: <a href="https://www.canada.ca/en/treasury-board-secretariat.html">Treasury Board of Canada Secretariat</a></strong></p>
+
+	<section>
+		<p><span class="label label-danger">Mandatory on standard pages</span></p>
+ 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+ 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+ 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<figure>
+			<figcaption class="caption"><b>{{ page.title }}</b></figcaption>
+			<img src="breadcrumb-en.png" alt="Breadcrumb trail appears on the lower left of the Canada.ca header">
+		</figure>
+	</section>
+    <!-- Objective -->
+    <section>
+      <h2>Objective</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio repellat, cum doloribus et illum debitis mollitia neque ex ea excepturi.</p>
+    </section>
+	<!-- /Objective -->
+
+	<!-- When to use -->
+	<section>
+		<h2>When to use the {{ page.title | downcase }}</h2>
+		<p>The breadcrumb trail is mandatory on all pages, except campaign pages and transactional pages. For more information, go to the <a href="https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-information-architecture-specification/mandatory-elements.html#header-footer">Mandatory elements of the design system</a>.</p>
+	</section>
+    <!-- /When to use -->
+
+    <!-- Implementation -->
+    <section>
+    	<h2>How to implement the {{ page.title | downcase }}</h2>
+    	<ul>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus reiciendis aspernatur quia iste similique deleniti.</li>
+			<li>Ea assumenda, amet enim quaerat praesentium sint ab natus inventore provident distinctio ducimus ipsam nemo.</li>
+			<li>Vel accusantium sit fugit est, minus impedit saepe cum iusto beatae explicabo ducimus! Repellat, quisquam!</li>
+		</ul>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea aperiam quam voluptatibus, nam quaerat nulla reiciendis nostrum minus. Nulla accusamus tempore quaerat sequi repudiandae ipsum! Ullam, eligendi. Velit, quia, quibusdam.</p>
+    </section>
+    <!-- /Implementation -->
+		<wb-canvas v="5">
+			 <dl style="all:inherit">
+    		<dt style="all:inherit">Date modified:</dt>
+    		<dd style="all:inherit"><time property="dateModified">{% last_modified_at %Y-%m-%d %}</time></dd>
+			</dl>
+		</wb-canvas>
+    <section>
+      <h2>Example {{ page.title | downcase }} </h2>
+      <p>Proper usage for different locations on Canada.ca is as follows:</p>
+      <dl>
+    		<dt>Date modified:</dt>
+    		<dd><time property="dateModified">{% last_modified_at %Y-%m-%d %}</time></dd>
+			</dl>
+   
+    </section>
+<!-- /Content -->

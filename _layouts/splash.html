@@ -1,0 +1,36 @@
+<html lang="{{ page.lang }}" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+    <head prefix="og: http://ogp.me/ns#">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+        <title>{{ page.title }} - Canada.ca</title>
+        <meta content="width=device-width,initial-scale=1" name="viewport">
+        <meta name="description" content="{{ page.description }}">
+        <meta name="dc.creator" content="{{ site.creator }}">
+
+        <meta name="dc.title" content="{{ page.title }}">
+        <meta name="dc.issued" title="W3CDTF" content="{{ page.date }}">
+        <meta name="dc.modified" title="W3CDTF" content="{{ page.date }}">
+        <meta name="dc.subject" content="{{ page.subject }}">
+        <meta name="dc.language" title="ISO639-2" content="eng">
+
+        <link rel="apple-touch-icon" sizes="57x57 72x72 114x114 144x144 150x150" class="wb-favicon" href="/assets/theme/gcweb/5.1/assets/favicon-mobile.png">
+        <link href="/assets/theme/gcweb/5.1/assets/favicon.ico" rel="icon">
+
+        <link rel="stylesheet" href="/assets/theme/gcweb/5.1/css/theme.css">
+
+        <noscript>
+            <link rel="stylesheet" href="/assets/theme/gcweb/5.1/css/noscript.css"/>
+        </noscript>
+
+    </head>
+
+    <body class="splash" vocab="http://schema.org/" typeof="WebPage">
+
+        {{ content }}
+
+        <script data-main="/assets/js/wet-boew/boot" src="/assets/vendor/requirejs/2.3.6/require.js"></script>
+
+    </body>
+</html>
