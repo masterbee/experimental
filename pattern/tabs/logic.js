@@ -62,9 +62,9 @@
 
   // HIDE
 
-  // ShadyCSS will rename classes as needed to ensure style scoping.
+  // window.ShadyCSS will rename classes as needed to ensure style scoping.
 
-  ShadyCSS.prepareTemplate(template, 'wb-tabs');
+  window.ShadyCSS.prepareTemplate(template, 'wb-tabs');
 
   // /HIDE
 
@@ -156,7 +156,7 @@
 
       // will need access to its parent node.
 
-      ShadyCSS.styleElement(this);
+      window.ShadyCSS.styleElement(this);
 
       // /HIDE
 
