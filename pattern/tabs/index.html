@@ -7,7 +7,7 @@ lang: en
 	<h1 property="name" id="wb-cont" dir="ltr">Tabs Component</h1>
     <style>
 
-        howto-tab {
+        wb-tab {
       
           border: 1px solid black;
       
@@ -15,7 +15,7 @@ lang: en
       
         }
       
-        howto-panel {
+        wb-panel {
       
           padding: 20px;
       
@@ -23,7 +23,7 @@ lang: en
       
         }
       
-        howto-tab[selected] {
+        wb-tab[selected] {
       
           background-color: bisque;
       
@@ -39,7 +39,7 @@ lang: en
       
          */
       
-        howto-tabs:not(:defined), howto-tab:not(:defined), howto-panel:not(:defined) {
+        wb-tabs:not(:defined), wb-tab:not(:defined), wb-panel:not(:defined) {
       
           display: block;
       
@@ -47,13 +47,13 @@ lang: en
       
       </style>
 
-    <wb-tabs>
-        <howto-tab role="heading" slot="tab">Tab 1</howto-tab>
-        <howto-panel role="region" slot="panel">Content 1</howto-panel>
-        <howto-tab role="heading" slot="tab">Tab 2</howto-tab>
-        <howto-panel role="region" slot="panel">Content 2</howto-panel>
-        <howto-tab role="heading" slot="tab">Tab 3</howto-tab>
-        <howto-panel role="region" slot="panel">Content 3</howto-panel>
+    <wb-tabs v="5">
+        <wb-tab role="heading" slot="tab">Tab 1</wb-tab>
+        <wb-panel role="region" slot="panel">Content 1</wb-panel>
+        <wb-tab role="heading" slot="tab">Tab 2</wb-tab>
+        <wb-panel role="region" slot="panel">Content 2</wb-panel>
+        <wb-tab role="heading" slot="tab">Tab 3</wb-tab>
+        <wb-panel role="region" slot="panel">Content 3</wb-panel>
      </wb-tabs>
     
 <!-- /Content -->
