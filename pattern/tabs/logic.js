@@ -1,3 +1,6 @@
+/**
+@author Google, Ryan Hyma
+ */
 (function() { 
 
   /**
