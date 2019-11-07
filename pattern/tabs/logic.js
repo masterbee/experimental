@@ -1,4 +1,4 @@
-(function() {
+(function() { 
 
   /**
 
@@ -28,7 +28,7 @@
 
   // template for the contents of the shadow DOM is shared by all
 
-  // `<howto-tabs>` instances.
+  // `<wb-tabs>` instances.
 
   const template = document.createElement('template');
 
@@ -44,7 +44,7 @@
 
       }
 
-      ::slotted(howto-panel) {
+      ::slotted(wb-panel) {
 
         flex-basis: 100%;
 
@@ -64,7 +64,7 @@
 
   // ShadyCSS will rename classes as needed to ensure style scoping.
 
-  ShadyCSS.prepareTemplate(template, 'howto-tabs');
+  ShadyCSS.prepareTemplate(template, 'wb-tabs');
 
   // /HIDE
 
@@ -72,19 +72,19 @@
 
   /**
 
-   * `HowtoTabs` is a container element for tabs and panels.
+   * `wbTabs` is a container element for tabs and panels.
 
    *
 
-   * All children of `<howto-tabs>` should be either `<howto-tab>` or
+   * All children of `<wb-tabs>` should be either `<wb-tab>` or
 
-   * `<howto-tabpanel>`. This element is stateless, meaning that no values are
+   * `<wb-tabpanel>`. This element is stateless, meaning that no values are
 
    * cached and therefore, changes during runtime work.
 
    */
 
-  class HowtoTabs extends HTMLElement {
+  class wbTabs extends HTMLElement {
 
     constructor() {
 
@@ -188,9 +188,9 @@
 
       Promise.all([
 
-        customElements.whenDefined('howto-tab'),
+        customElements.whenDefined('wb-tab'),
 
-        customElements.whenDefined('howto-panel'),
+        customElements.whenDefined('wb-panel'),
 
       ])
 
@@ -264,11 +264,11 @@
 
         const panel = tab.nextElementSibling;
 
-        if (panel.tagName.toLowerCase() !== 'howto-panel') {
+        if (panel.tagName.toLowerCase() !== 'wb-panel') {
 
           console.error(`Tab #${tab.id} is not a` +
 
-            `sibling of a <howto-panel>`);
+            `sibling of a <wb-panel>`);
 
           return;
 
@@ -324,7 +324,7 @@
 
     _allPanels() {
 
-      return Array.from(this.querySelectorAll('howto-panel'));
+      return Array.from(this.querySelectorAll('wb-panel'));
 
     }
 
@@ -338,7 +338,7 @@
 
     _allTabs() {
 
-      return Array.from(this.querySelectorAll('howto-tab'));
+      return Array.from(this.querySelectorAll('wb-tab'));
 
     }
 
@@ -620,19 +620,19 @@
 
   }
 
-  customElements.define('howto-tabs', HowtoTabs);
+  customElements.define('wb-tabs', wbTabs);
 
 
 
-  // `howtoTabCounter` counts the number of `<howto-tab>` instances created. The
+  // `wbTabCounter` counts the number of `<wb-tab>` instances created. The
 
   // number is used to generated new, unique IDs.
 
-  let howtoTabCounter = 0;
+  let wbTabCounter = 0;
 
   /**
 
-   * `HowtoTabsTab` is a tab for a `<howto-tabs>` tab panel. `<howto-tab>`
+   * `wbTabsTab` is a tab for a `<wb-tabs>` tab panel. `<wb-tab>`
 
    * should always be used with `role=heading` in the markup so that the
 
@@ -640,19 +640,19 @@
 
    *
 
-   * A `<howto-tab>` declares which `<howto-panel>` it belongs to by
+   * A `<wb-tab>` declares which `<wb-panel>` it belongs to by
 
    * using that panel’s ID as the value for the `aria-controls` attribute.
 
    *
 
-   * A `<howto-tab>` will automatically generate a unique ID if none
+   * A `<wb-tab>` will automatically generate a unique ID if none
 
    * is specified.
 
    */
 
-  class HowtoTab extends HTMLElement {
+  class wbTab extends HTMLElement {
 
     static get observedAttributes() {
 
@@ -680,7 +680,7 @@
 
       if (!this.id)
 
-        this.id = `howto-tab-generated-${howtoTabCounter++}`;
+        this.id = `wb-tab-generated-${wbTabCounter++}`;
 
 
 
@@ -794,19 +794,19 @@
 
   }
 
-  customElements.define('howto-tab', HowtoTab);
+  customElements.define('wb-tab', wbTab);
 
 
 
-  let howtoPanelCounter = 0;
+  let wbPanelCounter = 0;
 
   /**
 
-   * `HowtoPanel` is a panel for a `<howto-tabs>` tab panel.
+   * `wbPanel` is a panel for a `<wb-tabs>` tab panel.
 
    */
 
-  class HowtoPanel extends HTMLElement {
+  class wbPanel extends HTMLElement {
 
     constructor() {
 
@@ -822,12 +822,12 @@
 
       if (!this.id)
 
-        this.id = `howto-panel-generated-${howtoPanelCounter++}`;
+        this.id = `wb-panel-generated-${wbPanelCounter++}`;
 
     }
 
   }
 
-  customElements.define('howto-panel', HowtoPanel);
+  customElements.define('wb-panel', wbPanel);
 
 })();
