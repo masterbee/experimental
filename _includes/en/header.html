@@ -11,7 +11,7 @@
       </section>
       <div class="row">
         <div class="brand col-xs-5 col-md-4">
-          <a href="https://www.canada.ca/en.html"><img src="/assets/theme/gcweb/5.1/assets/sig-blk-en.svg" alt=""><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+          <a href="https://www.canada.ca/en.html"><img src="{{ site.baseurl }}/assets/theme/gcweb/5.1/assets/sig-blk-en.svg" alt=""><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
         </div>
         <section id="wb-srch" class="col-lg-8 text-right">
           <h2>Search</h2>
@@ -34,7 +34,7 @@
         </section>
       </div>
     </div>
-    <wb-menu v="5" enhance="/assets/ajax/site.en.html" srcid="/pattern/menu" >
+    <wb-menu v="5" enhance="{{ site.baseurl }}/assets/ajax/site.en.html" srcid="{{ site.baseurl }}/pattern/menu" >
 		<nav class="gcweb-menu" typeof="SiteNavigationElement">
 			<div class="container">
 		  		<h2 class="wb-inv">Menu</h2>
@@ -59,7 +59,7 @@
 			</div>
         </nav>
 	</wb-menu>
-	<wb-breadcrumb v="5" srcid="/pattern/breadcrumb">
+	<wb-breadcrumb v="5" srcid="{{ site.baseurl }}/pattern/breadcrumb">
 	    <nav id="wb-bc" property="breadcrumb">
 	      <h2>You are here:</h2>
 	        <div class="container">

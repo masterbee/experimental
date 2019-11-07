@@ -32,11 +32,12 @@
           <a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
         </div>
         <div class="col-xs-6 col-md-3 col-lg-2 text-right">
-          <img src="/assets/wet-boew/assets/wmms-blk.svg" alt="Symbol of the Government of Canada">
+          <img src="{{ site.baseurl }}/assets/theme/gcweb/5.1/assets/wmms-blk.svg" alt="Symbol of the Government of Canada">
         </div>
       </div>
     </div>
   </div>
 </footer>
 	<!-- Scripts -->
-	<script data-main="/assets/wet-boew/wb" src="/assets/vendor/requirejs/2.3.6/require.js"></script>
+  <!-- load the webcomponents loader, which injects the necessary polyfill bundle -->
+<script data-main="{{ site.baseurl }}/assets/wet-boew/wb" src="{{ site.baseurl }}/assets/vendor/requirejs/2.3.6/require.js"></script>
