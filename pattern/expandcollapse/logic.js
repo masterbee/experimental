@@ -1,5 +1,5 @@
 // Create a class for the element
-class ExpandingList extends HTMLUListElement {
+class ExpandingList extends HTMLElement {
     constructor() {
       // Always call super first in constructor
       super();
@@ -47,5 +47,5 @@ class ExpandingList extends HTMLUListElement {
   }
   
   // Define the new element
-  customElements.define('wb-expandcollpase', ExpandingList);
+  customElements.define('wb-expandcollapse', ExpandingList);
 
