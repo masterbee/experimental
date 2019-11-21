@@ -1,0 +1,70 @@
+---
+title: Breadcrumb trail
+layout: default
+lang: en
+---
+<!--  Content -->
+	<h1 property="name" id="wb-cont" dir="ltr">Breadcrumb trail - Canada.ca design pattern</h1>
+    <p class="gc-byline"><strong>From: <a href="https://www.canada.ca/en/treasury-board-secretariat.html">Treasury Board of Canada Secretariat</a></strong></p>
+
+	<section>
+		<p><span class="label label-danger">Mandatory on standard pages</span></p>
+ 		<p>A horizontal series of links known as a “breadcrumb trail” gives people a sense of where they are in relation to the site structure.</p>
+    	<p>The links in the breadcrumb trail are not intended to reflect the path by which the visitor arrived at the current location. Rather, the links always represent the location of the current page as it stands in relation to the site’s user navigation model.</p>
+		<figure>
+			<figcaption class="caption"><b>Breadcrumb trail</b></figcaption>
+			<img src="breadcrumb-en.png" alt="Breadcrumb trail appears on the lower left of the Canada.ca header">
+		</figure>
+	</section>
+    <!-- Objective -->
+    <section>
+      <h2>Objective</h2>
+      <p>The purpose of the breadcrumb trail is to reinforce a visitor’s current location in the Canada.ca user navigation model. It indicates the location of the current page in relation to its parent in the site structure. It also provides a simple method to navigate to higher levels in the site structure.</p>
+    </section>
+	<!-- /Objective -->
+
+	<!-- When to use -->
+	<section>
+		<h2>When to use the breadcrumb trail</h2>
+		<p>The breadcrumb trail is mandatory on all pages, except campaign pages and transactional pages. For more information, go to the <a href="https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-information-architecture-specification/mandatory-elements.html#header-footer">Mandatory elements of the design system</a>.</p>
+	</section>
+    <!-- /When to use -->
+
+    <!-- Implementation -->
+    <section>
+    	<h2>How to implement the breadcrumb trail</h2>
+    	<ul>
+			<li>The first item is always “Home”, which always links to the Canada.ca home page in the current language</li>
+			<li>The current page is never displayed at the end of the breadcrumb trail</li>
+			<li>Use a greater-then sign (&gt;) to separate levels</li>
+			<li>Longer page titles are to be shortened where possible to reduce the space required to display the trail</li>
+		</ul>
+		<p>Each page or section name on the Canada.ca site should be associated with a shortened version of the name, for the purposes of breadcrumb and other navigation systems.</p>
+		<p>For example, when on the “Planning a business” page in the Business and industry theme, the breadcrumb trail will be:</p>
+		<p class="mrgn-tp-md">Home&nbsp;&nbsp; &gt;&nbsp;&nbsp; Business&nbsp;&nbsp; &gt;&nbsp;&nbsp; Starting a business</p>
+    </section>
+    <!-- /Implementation -->
+
+    <section>
+      <h2>Example breadcrumb trail links</h2>
+      <p>The breadcrumb trail always begins with "Home". Proper usage for different locations on Canada.ca is as follows:</p>
+      <dl>
+        <dt><b>Theme pages</b></dt>
+        <dd>Home</dd>
+        <dt><b>First-level topic pages</b></dt>
+        <dd>Home&nbsp;&nbsp; &gt;&nbsp;&nbsp; [Parent theme]</dd>
+        <dt><b>Mid-level topic pages</b></dt>
+        <dd>Home &nbsp;&nbsp; &gt;&nbsp;&nbsp; [Parent theme] &nbsp;&nbsp; &gt;&nbsp;&nbsp; [Parent topic]</dd>
+        <dt><b>Institutional profile pages</b></dt>
+        <dd>Home</dd>
+        <dt><b>Organizational profile pages</b></dt>
+        <dd>Home</dd>
+        <dt><b>Partnering and collaborative arrangement profile pages</b></dt>
+        <dd>Home</dd>
+        <dt><b>Services</b></dt>
+        <dd>Home &nbsp;&nbsp; &gt;&nbsp;&nbsp; [Parent theme] &nbsp;&nbsp; &gt;&nbsp;&nbsp; [Parent topic]</dd>
+        <dt><b>Search engine results pages</b></dt>
+        <dd>Home &nbsp;&nbsp; &gt;&nbsp;&nbsp;  Search</dd>
+      </dl>
+    </section>
+<!-- /Content -->

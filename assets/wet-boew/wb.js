@@ -20,7 +20,7 @@ require.config({
     }
 });
 
-require(["lib/dom/stylesheet", 'lib/string/utils', 'lib/url/utils' ], function( Stylesheet, StrUtil, URLUtil ) {
+require(["/experimental/assets/wet-boew/lib/dom/stylesheet.js", '/experimental/assets/wet-boew/lib/string/utils.js', '/experimental/assets/wet-boew/lib/url/utils.js','/experimental/assets/wet-boew/react.js','/experimental/assets/wet-boew/walk.js' ], function( Stylesheet, StrUtil, URLUtil,WBReact,Walk ) {
     var basePath = require.toUrl('');
 
     let insertListener = function(event) {
@@ -42,6 +42,9 @@ require(["lib/dom/stylesheet", 'lib/string/utils', 'lib/url/utils' ], function( 
         }
 
     }
+    window.wb = {}; 
+    window.wb.React = WBReact;
+    window.wb.Walk = Walk;
 
     document.addEventListener("animationstart", insertListener, false); // standard+ firefox
     document.addEventListener("MSAnimationStart", insertListener, false); // IE
